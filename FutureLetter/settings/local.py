@@ -49,7 +49,7 @@ INSTALLED_APPS = (
     'django_crontab',
     'django_cron',
     'pagination',
-    'bootstrap3_datetime',
+    #'bootstrap3_datetime',
 
 
 )
