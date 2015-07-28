@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block uptitle %}detail {% endblock %}
+{% block title %}
+    Detail on letter #{{ letter_number }}
+{% endblock %}
+
+<head>
+
+    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="/static/css/bootstrap-theme.css">
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    {{ form.media }}
+</head>
+
+{% block content %}
+
+<body>
+        <form method="post" role="form">
+            {% for field in form.visible_fields %}
+            <div id="div_{{ field.html_name }}"
+                 class="form-group{% if field.errors %} has-error{% endif %}">
+                {{ field.label_tag }}
+                {{ field }}
+                <div class="text-muted pull-right">
+                    <small>{{ field.help_text }}</small>
+                </div>
+                <div class="help-block">
+                    {{ field.errors }}
+                </div>
+            </div>
+            {% endfor %}
+            {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+            {% endfor %}
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </body>
+    {% comment %}
+<form action="" method="get">
+<h3>
+        <table>
+            {{ form.as_table }}
+        </table>
+</h3>
+ {% if user.is_authenticated %}
+<p>Back to the <a href = "{% url 'my_letters' %}">list. </a></p>
+{% else %}
+<p>Back to the <a href = "{% url 'public' %}">list. </a></p>
+{% endif %}
+
+</form>
+
+{% endcomment %}
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block uptitle %}public {% endblock %}
+
+{% load pagination_tags %}
+
+{% block title %}
+    Public Mail
+{% endblock %}
+
+{% block content %}
+    <h3>Click on a subject and you will see the details.</h3>
+    {% if latest_letters_list %}
+        <h3>
+    <ul>
+    {% autopaginate latest_letters_list 3 %}
+    {% for letter in latest_letters_list %}
+        <h2><a href="/public/{{ letter.id }}/">{{ letter.subject }}</a></h2>
+    {% endfor %}
+    {% paginate %}
+    </ul>
+        </h3>
+{% else %}
+    <p>No letters are available.</p>
+{% endif %}
+{% endblock %}

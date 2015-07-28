@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block uptitle %}FAQ {% endblock %}
+{% block title %}
+    Frequently Asked Questions
+{% endblock %}
+
+{% block content %}
+    <h3><li><b>What is the purpose of the resource?</b></li></h3>
+    <p>Sending a letter to yourself in the future, imagine how nice it would be to get it! You can write anything: your dreams, plans, hopes. Use your imagination!</p>
+    <h3><li><b>How can I be sure your source exists 20 years from now and I'll get my letter?</b></li></h3>
+    <p>The only thing you can do - is hope. ;) Also you can ask your future self if the source is still around ;)</p>
+    <h3><li><b>Is this all a front by some corporation to collect e-mail addresses to send us spam?</b></li></h3>
+    <p>No, all e-mail addresses are kept strictly confidential and will be used solely for the purpose of you sending e-mails to the future. So relax. And maybe remind your future self to relax as well.</p>
+    <h3><li><b>Can I send letters to other people?</b></li></h3>
+    <p>You can send letters to others, but only if you are a registered user. When they get the e-mail, they would'n see you e-mail adress, so you need to specify the sender's name.</p>
+    <h3><li><b>Can I contact you?</b></li></h3>
+    <p>Sure, you can contact us using a  <a href = "{% url 'contact' %}">contact form.</a></p>
+
+{% endblock %}

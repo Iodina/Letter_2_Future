@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block uptitle %}Letter 2 Future{% endblock %}
+{% block title %}
+    {% if user.is_authenticated %}
+        <h1>Welcome, {{ user.username }}!</h1>
+    {% else %}
+        <h1>Welcome, friend!</h1>
+
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+
+
+<h2>Getting a surprise from the past is actually kind of an amazing thing, don't you agree? </h2>
+<h4><li>Send e-mail your future self!</li>
+    <li>Congratulate your best friend on turning 80!</li>
+  <li>Send your future self some words of inspiration, a plan you want to stick to.</li>
+</h4>
+    <p> And then we'll do some time travel magic and deliver the letter for you! ;) </p>
+
+
+
+    {% if user.is_authenticated %}
+
+        <a class="btn btn-lg btn-success" href="{% url 'django.contrib.auth.views.logout' %}"  role="button">Logout</a>
+       {% else %}
+        <p><a class="btn btn-primary btn-lg" href="{% url 'register' %}" role="button">Sign up&raquo;</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'django.contrib.auth.views.login' %}" role="button">Sign in&raquo;</a></p>
+       {% endif %}
+
+
+
+
+
+
+
+{% endblock %}

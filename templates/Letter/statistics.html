@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block uptitle %}statistics {% endblock %}
+{% block title %}
+    Statistics
+{% endblock %}
+
+{% block content %}
+
+    <p>Number of letters send: <b>{{ num_send }}</b></p>
+    <p>Number of letters delivered: <b>{{ num_delivered }}</b></p>
+    <p>Number of letters waiting to be delivered: <b>{{ num_waiting }}</b></p>
+    <p>Number of public letters: <b>{{ num_pub }}</b></p>
+    <p>Number of private letters: <b>{{ num_priv }}</b></p>
+    <p>First Letter was sent on: <b>{{ date_first }}</b></p>
+    <p>Every day people send <b>{{ num_let_aday }}</b> letters</p>
+{% endblock %}
