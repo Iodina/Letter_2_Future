@@ -26,7 +26,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-
+LANGUAGE_CODE = 'en-us'
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
