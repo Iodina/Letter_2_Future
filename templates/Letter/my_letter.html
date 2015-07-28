@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block uptitle %}history {% endblock %}
 
-{% load pagination_tags %}
+{% load endless %}
 
 {% block title %}
     My Letters
@@ -13,11 +13,11 @@
     {% if my_letters_list %}
         <h3>
     <ul>
-    {% autopaginate my_letters_list 3 %}
+    {% paginate my_letters_list %}
     {% for letter in my_letters_list %}
         <h2><a href="/my_letters/{{ letter.id }}/">{{ letter.subject }}</a></h2>
     {% endfor %}
-    {% paginate %}
+    {% show_pages %}
     </ul>
         </h3>
 {% else %}
