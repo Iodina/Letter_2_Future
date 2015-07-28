@@ -79,10 +79,21 @@
         <input type="submit" value="Submit">
     </form>
     {% endcomment %}
+
+
+    {% comment %}
  {{ form.media }}
+
+ {% endcomment %}
+
 {% endblock %}
+
 {% block footer %}
+
+    {%comment%}
 {% block thanks %}{{ form.media }}{% endblock %}
+
+{%endcomment%}
     {% endblock %}
 
 
