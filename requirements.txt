@@ -1,6 +1,5 @@
 Django==1.8.3
 django-common-helpers==0.7.0
-django-bootstrap3-datetimepicker==3.0
 django-cron==0.4.3
 django-crontab==0.6.0
 django-datetime-widget==0.9.3
@@ -11,6 +10,6 @@ django-registration==1.0
 pytz==2015.4
 static3==0.6.1
 
-
+eonasdan-bootstrap-datetimepicker==4.15.35
 
 django-toolbelt==0.0.1
