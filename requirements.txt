@@ -1,4 +1,6 @@
 Django==1.8.3
+dj-database-url==0.3.0
+dj-static==0.0.6
 django-bootstrap3-datetimepicker==2.3
 django-common-helpers==0.7.0
 django-cron==0.4.3
@@ -8,9 +10,9 @@ django-pagination==1.0.7
 django-password-reset==0.7
 django-registration==1.0
 pytz==2015.4
+static3==0.6.1
 
-dj-database-url==0.3.0
-dj-static==0.0.6
+
 gunicorn==19.1.1
 psycopg2==2.5.1
 static==0.4
