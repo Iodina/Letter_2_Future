@@ -1,4 +1,4 @@
-from bootstrap3_datetime.widgets import DateTimePicker
+#from bootstrap3_datetime.widgets import DateTimePicker
 from django import forms
 from django.forms import ModelForm
 from Letter.models import Letter
@@ -26,11 +26,11 @@ class LetterForm(forms.ModelForm):
     email = forms.EmailField(max_length=254)
     subject = forms.CharField(max_length=100)
     text = forms.CharField(widget=forms.Textarea(attrs={'rows':10, 'cols':65}))
-    #date_received = forms.SplitDateTimeField()
-    date_received = forms.DateTimeField(
-        required=True,
-        widget=DateTimePicker(options={"format": "YYYY-MM-DD HH:mm",
-                                       "pickSeconds": False}))
+    date_received = forms.SplitDateTimeField()
+    # date_received = forms.DateTimeField(
+    #     required=True,
+    #     widget=DateTimePicker(options={"format": "YYYY-MM-DD HH:mm",
+    #                                    "pickSeconds": False}))
     privacy = forms.BooleanField(required=False)
 
     class Meta:
