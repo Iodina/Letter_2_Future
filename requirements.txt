@@ -12,3 +12,4 @@ static3==0.6.1
 
 
 django-toolbelt==0.0.1
+django-bootstrap3-datetimepicker
