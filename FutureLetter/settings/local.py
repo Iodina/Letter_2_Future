@@ -49,11 +49,13 @@ INSTALLED_APPS = (
     'django_crontab',
     'django_cron',
     'pagination',
-    #'bootstrap3_datetime',
+    'bootstrap3_datetime',
+    'endless_pagination'
 
 
 )
 
+ENDLESS_PAGINATION_PER_PAGE=3
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',

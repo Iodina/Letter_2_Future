@@ -50,6 +50,7 @@ INSTALLED_APPS = (
     'django_cron',
     'pagination',
     'bootstrap3_datetime',
+    'endless_pagination',
 
 )
 
@@ -68,6 +69,8 @@ MIDDLEWARE_CLASSES = (
 
 )
 
+
+ENDLESS_PAGINATION_PER_PAGE=3
 ROOT_URLCONF = 'FutureLetter.urls'
 CRONJOBS = [
     ('*/1 * * * *', 'FutureLetter.cron.cronjob'),
@@ -96,7 +99,10 @@ TEMPLATE_CONTEXT_PROCESSORS = ("django.core.context_processors.auth",
 "django.core.context_processors.request")
 WSGI_APPLICATION = 'FutureLetter.wsgi.application'
 
-
+# from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
+# TEMPLATE_CONTEXT_PROCESSORS += (
+#     'django.core.context_processors.request',
+# )
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 

@@ -7,5 +7,5 @@ try:
 except:
     live = True
 
-#if live:
-from .production import *
+if live:
+    from .production import *

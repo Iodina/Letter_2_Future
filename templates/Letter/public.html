@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 {% block uptitle %}public {% endblock %}
-
+{% comment %}
 {% load pagination_tags %}
+{% endcomment %}
+{% load endless %}
+
+
 
 {% block title %}
     Public Mail
@@ -12,11 +16,18 @@
     {% if latest_letters_list %}
         <h3>
     <ul>
-    {% autopaginate latest_letters_list 3 %}
+    {% comment %}
+
+     {% autopaginate latest_letters_list 3 %}
+      {% endcomment %}
+    {% paginate latest_letters_list %}
     {% for letter in latest_letters_list %}
         <h2><a href="/public/{{ letter.id }}/">{{ letter.subject }}</a></h2>
     {% endfor %}
+    {% show_pages %}
+    {% comment %}
     {% paginate %}
+    {% endcomment %}
     </ul>
         </h3>
 {% else %}
