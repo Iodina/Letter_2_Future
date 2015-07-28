@@ -50,6 +50,7 @@ INSTALLED_APPS = (
     'pagination',
     'bootstrap3_datetime',
 
+
 )
 
 

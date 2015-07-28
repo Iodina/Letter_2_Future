@@ -1,11 +1,13 @@
 Django==1.8.3
 django-common-helpers==0.7.0
+django-bootstrap3-datetimepicker==2.3
 django-cron==0.4.3
 django-crontab==0.6.0
 django-datetime-widget==0.9.3
 django-pagination==1.0.7
 django-password-reset==0.7
 django-registration==1.0
+
 pytz==2015.4
 static3==0.6.1
 
