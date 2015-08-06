@@ -12,7 +12,7 @@ sched = BlockingScheduler()
 def timed_job():
     letter = [l for l in  Letter.objects.all() if l.date_received.year == timezone.now().year and l.date_received.month == timezone.now().month
               and l.date_received.day == timezone.now().day and l.date_received.hour == timezone.now().hour
-              and l.date_received.minute == timezone.now().minute
+              and l.date_received.minute == timezone.now().minute + 1
               ]
 
     mails = [mail.EmailMessage(lett.subject,
