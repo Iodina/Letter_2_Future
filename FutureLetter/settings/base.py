@@ -52,6 +52,7 @@ INSTALLED_APPS = (
     'bootstrap3_datetime',
     'endless_pagination',
     'sendgrid',
+    'apscheduler',
 
 )
 

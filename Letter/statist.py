@@ -28,6 +28,9 @@ def date_first():
 def num_let_aday():
     first = date_first()
     num = ( timezone.now() - first).days
-    send = num_send()
-    return str(send / num)[:5]
+    if num:
+        send = num_send()
+        return str(send / num)[:5]
+    else:
+        return 0
 

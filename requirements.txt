@@ -13,6 +13,6 @@ pytz==2015.4
 static3==0.6.1
 
 sendgrid>=0.5.0
-
+APScheduler==3.0.0
 django-toolbelt==0.0.1
 django-bootstrap3-datetimepicker
