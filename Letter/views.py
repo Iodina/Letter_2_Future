@@ -12,12 +12,12 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import  UserCreationForm
 from django.conf import settings
 from Letter.statist import *
-import sendgrid
+# import sendgrid
 
 def contact(request):
 
 
-    sg = sendgrid.SendGridClient('app39439144@heroku.com', 'rv5ufdwq5977')
+    # sg = sendgrid.SendGridClient('app39439144@heroku.com', 'rv5ufdwq5977')
 
 
 
@@ -25,18 +25,18 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
-            message = sendgrid.Mail()
-            message.add_to('mariya.metelitsa@gmail.com')
-            message.set_subject(cd['subject'])
-            message.set_text(cd['message'])
-            message.set_from(cd.get('email', ''))
-            # send_mail(
-            #     cd['subject'],
-            #     cd['message'],
-            #     cd.get('email', ''),
-            #     ['mariya.metelitsa@gmail.com'],
-            # )
-            status, msg = sg.send(message)
+            # message = sendgrid.Mail()
+            # message.add_to('mariya.metelitsa@gmail.com')
+            # message.set_subject(cd['subject'])
+            # message.set_text(cd['message'])
+            # message.set_from(cd.get('email', ''))
+            send_mail(
+                cd['subject'],
+                cd['message'],
+                cd.get('email', ''),
+                ['mariya.metelitsa@gmail.com'],
+            )
+            # status, msg = sg.send(message)
             return HttpResponseRedirect('/contact/thanks/')
     else:
         form = ContactForm(
