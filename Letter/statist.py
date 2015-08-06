@@ -32,5 +32,5 @@ def num_let_aday():
         send = num_send()
         return str(send / num)[:5]
     else:
-        return 0
+        return '0'
 

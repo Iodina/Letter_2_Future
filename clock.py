@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from apscheduler.schedulers.blocking import BlockingScheduler
 from Letter.models import Letter
 from django.contrib.auth.models import User
@@ -13,8 +14,8 @@ def timed_job():
 
     mails = [mail.EmailMessage(lett.subject,
                                lett.text,
-                               User.objects.get(id=lett.author).email,
-                                [lett.email],
+                               lett.author.email,
+                               [lett.email],
                                ) for lett in letter
              ]
     connection = mail.get_connection()
@@ -31,3 +32,4 @@ def timed_job():
 #     print('This job is run every weekday at 5pm.')
 
 sched.start()
+# timed_job()
