@@ -52,7 +52,7 @@ INSTALLED_APPS = (
     'bootstrap3_datetime',
     'endless_pagination',
     'sendgrid',
-    'apscheduler',
+    ''
 
 )
 
@@ -121,7 +121,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Kiev'
 
 USE_I18N = True
 
