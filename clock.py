@@ -24,7 +24,9 @@ def timed_job():
                                [lett.email],
                                ) for lett in letter
              ]
-    for item in letter: item.update(sent=True)
+    for item in letter:
+        item.sent=True
+        item.save()
 
     connection = mail.get_connection()
 
