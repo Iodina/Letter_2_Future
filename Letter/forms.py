@@ -35,7 +35,7 @@ class LetterForm(forms.ModelForm):
 
     class Meta:
         model = Letter
-        exclude= ['date_created', 'author']
+        exclude= ['date_created', 'author', 'sent']
 
 
 class UserForm(forms.ModelForm):
