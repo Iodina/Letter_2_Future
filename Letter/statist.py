@@ -6,11 +6,14 @@ def num_send():
     return Letter.objects.all().count()
 
 def num_delivered():
-    l = Letter.objects.exclude(date_received__gt=timezone.now())
+    # l = Letter.objects.exclude(date_received__gt=timezone.now())
+    l = Letter.objects.filter(sent=True)
     return str(len(l))
 
 def num_waiting():
-    return str(len(Letter.objects.filter(date_received__gt=timezone.now())))
+    # return str(len(Letter.objects.filter(date_received__gt=timezone.now())))
+    l = Letter.objects.filter(sent=False)
+    return str(len(l))
 
 def num_pub():
     l = Letter.objects.filter(privacy=False).count()
