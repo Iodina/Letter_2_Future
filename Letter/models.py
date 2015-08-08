@@ -13,6 +13,7 @@ class Letter(models.Model):
     date_received = models.DateTimeField('Deliver on:')
     privacy = models.BooleanField('Private')
     author = models.ForeignKey(User)
+    # sent = models.BooleanField(null=False, blank=True)
 
     def __str__(self):
          return self.subject

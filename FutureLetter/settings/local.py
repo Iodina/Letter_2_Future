@@ -50,7 +50,8 @@ INSTALLED_APPS = (
     'django_cron',
     'pagination',
     'bootstrap3_datetime',
-    'endless_pagination'
+    'endless_pagination',
+    'south',
 
 
 )
