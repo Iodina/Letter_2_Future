@@ -92,7 +92,8 @@ def write(request):
                 date_created=datetime.datetime.now(),
                 date_received=cd['date_received'],
                 privacy=cd['privacy'],
-                author=request.user
+                author=request.user,
+                sent=False
             )
             l.save()
             return HttpResponseRedirect('/write/thanks/')
